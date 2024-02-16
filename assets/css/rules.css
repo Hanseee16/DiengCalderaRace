@@ -1,0 +1,189 @@
+:root {
+  --blue: #0f385a;
+  --red: #db545a;
+  --yellow: #dfe221;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* navbar */
+#navbar {
+  background-color: var(--blue);
+}
+
+/* toggle */
+.navbar-toggler {
+  border: 0 !important;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+.toggler-icon {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  display: block;
+  transition: all 0.2s;
+}
+.middle-bar {
+  margin: 5px auto;
+}
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.navbar-toggler .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+.navbar-toggler.collapsed .toggler-icon {
+  background-color: #ffffff;
+}
+
+/* navbar */
+.navbar {
+  transition: all 500ms ease-in-out;
+}
+
+.navbar > div {
+  transition: all 1000ms ease-in-out;
+}
+
+.navbar .nav-link {
+  color: white;
+  font-size: 15px;
+}
+
+.nav-link:hover {
+  color: var(--yellow);
+  transition: all 500ms ease-in-out;
+}
+
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar-nav .nav-item.dropdown:not(:hover) .dropdown-menu {
+  display: none;
+}
+
+/* hero */
+#hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../image/rules/image.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  /* height: 200vh; */
+}
+
+.hero .row {
+  height: 150vh;
+}
+
+.hero h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* rules */
+#rules {
+  background-image: url(../image/background/bg-white.jpg);
+}
+
+.hero .accordion-button {
+  background-color: var(--blue);
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* footer */
+footer {
+  background-color: var(--blue);
+  padding: 50px;
+}
+footer p {
+  font-size: 14px;
+}
+
+/* back to top */
+#back-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 26px;
+  width: 45px;
+  height: 45px;
+  background-color: var(--yellow);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-property: background-color, color;
+}
+#back-to-top-btn:hover,
+#back-to-top-btn:focus {
+  background-color: #b0b310;
+  color: #fff;
+}
+
+.btnEntrance {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: btnEntrance;
+}
+
+@keyframes btnEntrance {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.btnExit {
+  animation-duration: 0.25s;
+  animation-fill-mode: both;
+  animation-name: btnExit;
+}
+
+@keyframes btnExit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
